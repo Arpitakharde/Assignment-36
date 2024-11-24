@@ -75,7 +75,20 @@
             sai :"9190876543"
         }
 
-        
+        function search(){
+          const searchInput = document.getElementById("word-input");
+          const query =searchInput.value.toLowerCase();
+
+          const mobile = contacts[query];
+          const output = document.getElementById("output");
+
+          if(mobile){
+                output.innerText = `Mobile number of ${query} is ${mobile}`;
+            }
+          else{
+                output.innerText = `Contact not found`;
+          }  
+        }
     </script>
 </body>
 </html>
